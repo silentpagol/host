@@ -1,5 +1,4 @@
-*
-{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,27 +6,23 @@
     color: white;
 }
 
-body
-{
-    background-color: seagreen;
+body {
+    background-color: cadetblue;
 }
 
 
-p
-{
+p {
     text-align: justify;
-    padding: 0 3px;                       
+    padding: 0 3px;
 }
 
-#cover 
-{
+#cover {
     width: 100%;
     border: solid 5px royalblue;
-    
+
 }
 
-#menu
-{
+#menu {
     width: 100%;
     height: 65px;
     background-color: royalblue;
@@ -36,92 +31,197 @@ p
     top: 5px;
 }
 
-#menu ul li
-{
+#menu ul li {
     display: inline-block;
     list-style-type: none;
     font-weight: bolder;
     font-size: 20px;
-    padding: 20px; 
+    padding: 20px;
 }
 
-#contact
-{
+#contact {
     width: 100%;
     height: 60px;
     background-color: royalblue;
     text-align: center;
-    position: fixed;
+    position: bottom;
     bottom: 0px;
 
 }
 
 
-#contact ul li
-{
+#contact ul li {
     display: inline-block;
     list-style-type: none;
     font-weight: bolder;
     font-size: 10px;
-    padding: 10px; 
+    padding: 10px;
 }
 
-#contact ul li a img
-{
+#contact ul li a img {
     width: 40px;
     height: 40px;
 }
 
-#menu ul li a
-{
-   text-decoration: none;
-   color: white;
-   transition: 1s;
+#menu ul li a {
+    text-decoration: none;
+    color: white;
+    transition: 1s;
 }
 
-#menu:hover
-{
+#menu:hover {
     background-color: red;
     font-size: 1.5rem;
 }
-table
-{
+
+table {
     border: 3px solid tomato;
     border-collapse: collapse;
-    
+
 }
 
-th
-{
+th {
     border: 2px solid tomato;
     padding: 5px;
     background-color: royalblue;
     color: white;
 }
 
-td
-{
+td {
     border: 2px solid tomato;
     padding: 5px;
     text-align: center;
-    
+
 }
 
-tr:nth-child(odd)
-{
+tr:nth-child(odd) {
     background-color: darkturquoise;
 }
 
-tr:nth-child(even)
-{
+tr:nth-child(even) {
     background-color: teal;
 }
 
-details,p
-{
-    padding:10px;
+details,
+p {
+    padding: 10px;
 }
-details[open] > summary
-{
+
+details[open]>summary {
     background-color: blueviolet;
+}
+
+
+.skill {
+    width: 80%;
+    min-height: 350px;
+    background-color: grey;
+    text-transform: uppercase;
+    border-radius: 10px;
+    padding: 30px 0px;
+    margin: 0px auto;
+    margin-top: 25px;
+}
+
+.skill:hover {
+    box-shadow: 2px 2px 15px orangered, -2px -2px 15px orangered;
+}
+
+.skill p
+{
+    text-align: center; 
+    font-size: 25px;
+}
+
+.skill ul li {
+    list-style-type: none;
+    margin: 30px 50px 15px 15px;
+    padding: 5px;
+    position: relative;
+}
+
+.skill ul li::before {
+    content: "";
+    width: 100%;
+    height: 25px;
+    top: 25px;
+    left: 0px;
+    border-radius: 100px;
+    background-color: lemonchiffon;
+    position: absolute;
+    margin: 5px;
+
+}
+
+.skill ul li::after {
+    content: "";
+    width: 0%;
+    height: 25px;
+    top: 25px;
+    left: 0px;
+    border-radius: 100px;
+    background-color: tomato;
+    position: absolute;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    margin: 5px;
+}
+
+.skill ul li.html::after {
+    animation-name: html;
+}
+
+
+@keyframes html {
+    to {
+        width: 85%;
+        background-color: orangered;
+    }
+}
+
+.skill ul li.css::after {
+    animation-name: css;
+}
+
+@keyframes css {
+    to {
+        width: 65%;
+        background-color: darkviolet;
+    }
+}
+
+.skill ul li.js::after {
+    animation-name: js;
+}
+
+@keyframes js {
+    to {
+        width: 40%;
+        background-color: orangered;
+    }
+}
+
+.skill ul li.python::after {
+    animation-name: python;
+}
+
+@keyframes python {
+    to {
+        width: 90%;
+        background-color: darkviolet;
+    }
+}
+
+.skill ul li.c::after {
+    animation-name: c;
+}
+
+@keyframes c {
+    to {
+        width: 90%;
+        background-color: orangered;
+    }
 }
